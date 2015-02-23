@@ -1,0 +1,17 @@
+<?php global $obj, $html_img; ?>
+<div id="datapreview">
+    <a href="<?php echo $obj->original_url?>" target="_blank">
+        <?php if(!empty($html_img)) : ?>
+        <div class="cover"><?php echo $html_img?></div>
+        <?php endif; ?>
+        <?php if(!empty($obj->title)) : ?>
+        <div class="title"><?php echo $obj->title?></div>
+        <?php endif; ?>
+        <?php if(!empty($obj->description)) : ?>
+        <div class="content"><?php echo $obj->description?></div>
+        <?php endif; ?>
+        <?php if(!empty($obj->provider_display)) : ?>
+        <div class="provider"><?php echo strtoupper($obj->provider_display)?></div>
+        <?php endif; ?>
+    </a>
+</div>
